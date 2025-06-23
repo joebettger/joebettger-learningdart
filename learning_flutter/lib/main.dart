@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'App Title',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
         home: MyHomePage(),
       ),
@@ -35,7 +35,16 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
       body: Column(
-        children: [Text('A random idea:'), Text(appState.current.asLowerCase)],
+        children: [
+          Text('A random AWESOME idea:'),
+          Text(appState.current.asLowerCase),
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed here');
+            },
+            child: Text('Next'),
+          ),
+        ],
       ),
     );
   }
